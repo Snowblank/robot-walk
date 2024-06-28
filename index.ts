@@ -19,11 +19,17 @@ enum EDirection {
 
 }
 
-rl.question('what command Robot?', (command: string) => {
-    console.log(`command, ${command}`);
-    const commandList = splitCommand(command);
-    robotWalk(commandList);
-    rl.close();
+rl.question('Enter the command for the robot? \n', (command: string) => {
+    console.log(`command: ${command}`);
+    try {
+        const commandList = splitCommand(command);
+        const postionRobot = robotWalk(commandList);
+        rl.write(`Robot Position: X: ${postionRobot.x} Y: ${postionRobot.y} Direction: ${postionRobot.direction}`)
+    } catch (error) {
+        console.log(`Error: ${(error as Error).message}`);
+    } finally {
+        rl.close();
+    }
 });
 
 function splitCommand(command: string) {
@@ -48,7 +54,7 @@ function splitCommand(command: string) {
                 throw new Error("unknown command")
         }
     }
-    console.log("CommandList", result);
+    // console.log("CommandList", result);
     return result;
 }
 
@@ -93,7 +99,8 @@ function robotWalk(commandList: string[]) {
         }
 
     }
-    console.log("positionRobot", positionRobot)
+    // console.log("positionRobot", positionRobot)
+    return positionRobot;
 }
 
 function changeDirection(currentDirection: EDirection, targetCommand: ECommand.L | ECommand.R) {
@@ -120,7 +127,7 @@ function changeDirection(currentDirection: EDirection, targetCommand: ECommand.L
     if (result == null) {
         throw new Error("not found direction")
     }
-    console.log("changeDirection-result", result)
+    // console.log("changeDirection-result", result)
     return result
 }
 
