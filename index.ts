@@ -153,6 +153,7 @@ function move(currentDirection: EDirection, targetCommand: string) {
         },
     }
     console.log("test-1");
+    console.log("feat-1")
 
     const direction = moveDirectionDict[currentDirection];
     if (direction == null) {
