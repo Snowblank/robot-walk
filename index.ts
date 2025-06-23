@@ -104,6 +104,7 @@ function robotWalk(commandList: string[]) {
 }
 
 function changeDirection(currentDirection: EDirection, targetCommand: ECommand.L | ECommand.R) {
+    console.log("feat-2")
     const directionDict = {
         [EDirection.NORTH]: {
             [ECommand.L]: EDirection.WEST,
