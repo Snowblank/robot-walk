@@ -5,6 +5,8 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+console.log("add-on-feat-1")
+
 enum ECommand {
     L = 'L',
     R = 'R',
