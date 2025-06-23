@@ -152,6 +152,7 @@ function move(currentDirection: EDirection, targetCommand: string) {
             y: 0
         },
     }
+    console.log("test-1");
 
     const direction = moveDirectionDict[currentDirection];
     if (direction == null) {
