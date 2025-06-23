@@ -133,7 +133,7 @@ function changeDirection(currentDirection: EDirection, targetCommand: ECommand.L
 
 function move(currentDirection: EDirection, targetCommand: string) {
     const amountWalk = parseInt(targetCommand.slice(1, targetCommand.length))
-
+    console.log("feat-1")
     const moveDirectionDict = {
         [EDirection.NORTH]: {
             x: 0,
