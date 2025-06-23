@@ -6,6 +6,7 @@ const rl = readline.createInterface({
 });
 
 console.log("add-on-feat-1")
+console.log("add-on-feat-1 again")
 
 enum ECommand {
     L = 'L',
