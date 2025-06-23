@@ -127,6 +127,7 @@ function changeDirection(currentDirection: EDirection, targetCommand: ECommand.L
     if (result == null) {
         throw new Error("not found direction")
     }
+    console.log('feat-2')
     // console.log("changeDirection-result", result)
     return result
 }
