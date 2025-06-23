@@ -34,6 +34,7 @@ rl.question('Enter the command for the robot? \n', (command: string) => {
 
 function splitCommand(command: string) {
     console.log('sub-feat-1')
+    console.log('sub-feat-2')
     const result: string[] = [];
     for (let i = 0; i < command.length; i++) {
         const commandStr = command[i];
